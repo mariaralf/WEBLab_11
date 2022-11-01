@@ -1,0 +1,57 @@
+﻿@page 
+@model RazorPagesApp.Pages.IndexModel
+@{
+   
+    Layout = "Shared/_Layout.cshtml";
+    Response.Cookies.Delete("go_to_tab_number");
+}
+
+<head>
+ <link rel='stylesheet' href=~/css/site.css />
+</head>
+
+<body> 
+    <div class="index_render_wrapper"> 
+        @{
+
+
+            RazorPagesApp.RazorPagesAppContext DBContext = new RazorPagesApp.RazorPagesAppContext();
+            //Console.WriteLine("[" + Request.Cookies["go_to_tab_number"] + "]");
+            switch (Request.Cookies["go_to_tab_number"]){
+                case "1": { 
+                        @await Html.PartialAsync("FirstTab(ServiceDescription).cshtml");
+                        break;
+                    }
+                case "2": {  
+                        @await Html.PartialAsync("SecondTab(GoogleMaps).cshtml");                     
+                        break; }
+                case "3":
+                    {
+                        @await Html.PartialAsync("ThirdTab(SystemTypes).cshtml",DBContext);                      
+                        break;
+                    }
+
+                case "4":
+                    {                       
+                        @inject Microsoft.AspNetCore.Hosting.IWebHostEnvironment hostingEnv;                     
+                        RazorPagesApp.Pages.fourthTab_upload_images_Model topass = new RazorPagesApp.Pages.fourthTab_upload_images_Model(hostingEnv);
+                        @await Html.PartialAsync("fourthTab(upload_images).cshtml",topass);                      
+                        break;
+                    }
+                case "5":
+                    {
+                          @await Html.PartialAsync("fifthTab(Tonnage).cshtml",DBContext);
+                        break;
+                    }
+
+                default:  { 
+                        @await Html.PartialAsync("FirstTab(ServiceDescription).cshtml"); break; }
+            }
+
+            
+        }
+        
+    
+    </div>
+    <script src="js/site.js"></script>
+</body>

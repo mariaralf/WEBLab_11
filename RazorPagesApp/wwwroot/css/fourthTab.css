@@ -1,0 +1,121 @@
+﻿p{
+    font-size:18px;
+    font-weight:500;
+}
+
+.rendered_tab{
+    display:flex;
+    align-items:center;
+    flex-direction:column;
+    justify-content:space-evenly;
+}
+
+.fourth_tab{
+   
+}
+.fourth_tab_info_part {
+    justify-content: center;
+    padding-top: 10px;
+    width: 65%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content: flex-start;
+}
+
+
+.images_examples_flex_parent {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content:space-between;
+    height: 85%;
+    border: 1px solid red;
+}
+
+.images_examples_flex_child{
+    width:47.5%;
+    border:1px solid red;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    align-items:center;
+    gap:20px;
+}
+.child_image{
+    height:60%;
+}
+.child_image img{
+    width:250px;
+    height:250px;
+}
+.child_text{
+    width:250px;
+    height:40%;
+    font-size:18px;
+}
+
+
+.fourth_tab_upload_part {
+    width: 65%;
+    background: #c4c4c4;
+    border-radius: 50px;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.select_files_button input{
+    display:none;
+}
+
+
+.select_files_button {
+    outline: none;
+    text-decoration: none;
+    width: 180px;
+    height: 50px;
+    border: 1px solid transparent;
+    border-radius: 25px;
+    font-weight: 700;
+    background: #6b0000;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+    .select_files_button:hover {
+        background: white;
+        color: #6b0000;
+        border: 1px solid #6b0000;
+    }
+
+
+.fourth_tab_buttons{
+    gap:20px;
+    width:65%;
+    height:auto;
+    border:1px solid red;
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-end;
+    align-items:center;
+}
+.fourth_tab_buttons .button{
+    margin-top:0;
+}
+
+
+#imageName{
+   width:90%;
+   word-break:break-word;
+   max-height:50px;
+   overflow-x:hidden;
+   overflow-y:scroll;
+}

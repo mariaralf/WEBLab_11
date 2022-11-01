@@ -1,0 +1,54 @@
+﻿@page 
+@addTagHelper*, Microsoft.AspNetCore.Mvc.TagHelpers
+@model RazorPagesApp.Pages.fourthTab_upload_images_Model 
+@using RazorPagesApp.Pages
+@{
+}
+<head>
+    <link rel="stylesheet" href="css/fourthTab.css?id=14" />
+</head>
+
+<div class="rendered_tab" >
+    <div class="fourth_tab_info_part">
+        <h2 class="center fourth_tab">Please, upload your indoor & outdoor unit photos:</h2>
+        <p>Example Photos:</p>
+        <div class="images_examples_flex_parent">
+            <div class="images_examples_flex_child">
+                <div class="child_image">
+                    <img src="img/img_example_1.png" />
+                </div>
+                <div class="child_text">
+                    The outdoor unit is typically located on the side or rear of your home. In your image(s), please include the manufacturer's name (Carrier, Trane, Rheem, Goodman, etc.) and the concrete pad.
+                </div>
+            </div>
+            <div class="images_examples_flex_child">
+                <div class="child_image">
+                      <img src="img/img_example_2.png" />
+                </div>
+                <div class="child_text">
+                    The indoor unit (air handler) may be located in a closet, garage, or other out-of-the-way location inside the home. In your image(s), please include the emergency disconnect location.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <form class="fourth_tab_upload_part" id='fileUploadForm' enctype="multipart/form-data" method="POST">
+        <p>Drop files here or</p>
+        <label class="select_files_button" id="fake_file_upload_button"> 
+            Select files
+        <input type="file" id="fileUpload" name="postedFiles" value="Select files" multiple required accept=".png, .jpg, .jpeg, .webp" />
+        </label>
+        <div id="imageName"></div>
+       </form>
+
+
+    <div class="fourth_tab_buttons">
+        <div class="button" onclick="SwitchTab(3)">Back</div>
+         <input type='submit' form="fileUploadForm" value="Next" id="next_input"  class="button button_disabled" />
+    
+    </div>
+
+   
+</div>
+
+<script src="js/fourthTab.js?ab=2323232"></script>

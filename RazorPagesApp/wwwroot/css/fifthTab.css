@@ -1,0 +1,53 @@
+﻿.rendered_tab{
+    width:50%;
+    display:flex;
+    flex-direction:column;
+}
+
+.rendered_tab_flex_child{
+    width:100%;
+    border:1px solid red;
+}
+
+    .text_image_group{
+        height:60%;
+        display:flex;
+        flex-direction:column;
+    }
+
+    .dropdown_group{
+        height:10%;
+    }
+
+    .checkbox_group {
+        height: 20%;
+    }
+
+    .button_group {
+        height: 10%;
+    }
+
+.image_group{
+    justify-content:space-evenly;
+    height:50%;
+    display:flex;
+    flex-direction:row;
+}
+
+.image_group img{
+    height:250px;
+    width:250px;
+}
+
+.text_image_group h2{
+ display:flex;
+ align-items:center;
+    height:15%;
+   justify-content:center;
+    width:100%;
+}
+.text_image_group p{
+    height:35%;
+    font-size:18px;
+    font-weight:500;
+}

@@ -1,0 +1,31 @@
+﻿@page
+@model RazorPagesApp.RazorPagesAppContext
+
+@{
+    RazorPagesApp.RazorPagesAppContext db_context = new RazorPagesApp.RazorPagesAppContext();
+    List<RazorPagesApp.SystemTonnage> systemTonnages = new List<RazorPagesApp.SystemTonnage>();
+    systemTonnages = db_context.SystemTonnages.ToList();
+}
+
+<head>
+    <link rel="stylesheet" href="css/fifthTab.css" />
+</head>
+
+<div class="rendered_tab" >
+   <div class="rendered_tab_flex_child text_image_group">
+       <h2>Please, select your system tonnage:</h2>
+        <div class="image_group">
+            <img src="~/img/sys_tonnage_1.png" />
+            <img src="~/img/sys_tonnage_2.png" />
+        </div>
+        <p>
+            To determine your system's tonnage, look at the model number on the label. There will be a number divisible by 12 (ending in either a whole number or .5). Divide that number by 12 to get your tonnage. (30/12=2.5 tons or 36/12=3 tons.) This tool is only meant to be used to determine a like-for-like sizing replacement. When you select a tonnage from the following drop-down menu, we will use that tonnage to determine the price of your replacement.
+        </p>
+   </div>
+   <div class="rendered_tab_flex_child dropdown_group">dropdown</div>
+   <div class="rendered_tab_flex_child checkbox_group">checkbox</div>
+   <div class="rendered_tab_flex_child button_group">buttons</div>
+</div>
+
+
+<script src="js/fifthTab.js"></script>

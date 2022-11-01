@@ -1,0 +1,41 @@
+﻿@page
+@model RazorPagesApp.RazorPagesAppContext
+
+@{
+    RazorPagesApp.RazorPagesAppContext db_context = new RazorPagesApp.RazorPagesAppContext();
+    List<RazorPagesApp.SystemType> systemTypes = new List<RazorPagesApp.SystemType>();
+    systemTypes = db_context.SystemTypes.ToList();
+}
+
+<head>
+    <link rel="stylesheet" href="css/thirdTab.css?this_parameter_is=to_stop_css_caching" />
+</head>
+
+<div class="rendered_tab" >
+    <div class="third_tab_upper_part">
+         <h2 class="center">PLEASE, SELECT YOUR SYSTEM TYPE:</h2>
+         <div class="select_system_type">
+             <div class="system_type_single" id="system_type_1" onclick="ChooseSystemType(1)">
+                 <div class="system_type_single_header">@systemTypes[0].SystemTypeName</div>
+                 <div class="system_type_single_image">
+                     <img class="content_image" src="@systemTypes[0].Img" />
+                 </div>
+             </div>
+             <div class="system_type_single" id="system_type_2" onclick="ChooseSystemType(2)">
+                  <div class="system_type_single_header">@systemTypes[1].SystemTypeName</div>
+                 <div class="system_type_single_image">
+                     <img  class="content_image" src="@systemTypes[1].Img" />
+                 </div>
+             </div>
+         </div>
+    </div>
+    <div class="third_tab_bottom_part">
+        <div class="third_tab_buttons_block" style="padding-top:5%;">
+            <div class="button" onclick="SwitchTab(2)">back</div>
+            <div class="button button_disabled" id="third_tab_next_button">next</div>
+        </div>
+    </div>
+</div>
+
+
+<script src="js/thirdTab.js"></script>

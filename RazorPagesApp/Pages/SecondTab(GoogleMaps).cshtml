@@ -1,0 +1,36 @@
+﻿<head>
+    <link rel="stylesheet" href="css/secondTab.css" />
+</head>
+
+<div class="rendered_tab">
+    <div class="second_tab_upper_part">
+        <h2 class="center">please provide your address first</h2>
+        <div class="in_out_service_area_block" id="in_out_service_area_block">
+            PLEASE ENTER YOUR LOCATION OR SELECT IT ON THE MAP
+        </div>
+        <input class="in_out_service_area_block in_out_service_area_block_input" id="address_text_input" type="text"/>
+        <div class="button button_disabled" style="margin-top:0px;" id="check_address_button">check</div>
+    </div>
+
+    <div class="second_tab_bottom_part">
+        <div class="second_tab_bottom_map_block" id="googleMap">
+
+        </div>
+
+        <div class="second_tab_bottom_button_block">
+            <div class="second_tab_buttons_group">
+                <div class="button nomargin" id="second_tab_back_button" onclick="SwitchTab(1)">back</div>
+                <div class="button nomargin button_disabled" id="second_tab_next_button">next</div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+    
+ 
+
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDa4AqYfhBt-3OjKVHdIissUR5EkwBUpik&callback=myMap"></script>
